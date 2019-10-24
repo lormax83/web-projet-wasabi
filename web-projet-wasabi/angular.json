@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "web-projet-wasabi": {
+    "Web-projet-wasabi": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/web-projet-wasabi",
+            "outputPath": "dist/Web-projet-wasabi",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -63,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "web-projet-wasabi:build"
+            "browserTarget": "Web-projet-wasabi:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "web-projet-wasabi:build:production"
+              "browserTarget": "Web-projet-wasabi:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "web-projet-wasabi:build"
+            "browserTarget": "Web-projet-wasabi:build"
           }
         },
         "test": {
@@ -89,6 +90,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -111,15 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "web-projet-wasabi:serve"
+            "devServerTarget": "Web-projet-wasabi:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "web-projet-wasabi:serve:production"
+              "devServerTarget": "Web-projet-wasabi:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "web-projet-wasabi"
+    }
+  },
+  "defaultProject": "Web-projet-wasabi"
 }
